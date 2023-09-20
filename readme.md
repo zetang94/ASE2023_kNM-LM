@@ -2,7 +2,7 @@
 
 The purpose of this project is to enable language models to adapt to code completion tasks in different domains without the need for fine-tuning. The primary method used is the kNN-LM framework. Unlike the standard kNN-LM, we only store samples where the language model makes mistakes when predicting. This decouples the database from the language model's capabilities, allowing us to use Bayesian inference to merge the predictions of the database and the language model.
 
-![image-20230920140126952](https://github.com/zetang94/ASE2023_kNM-LM/structure.png)
+![image-20230920140126952](https://github.com/zetang94/ASE2023_kNM-LM/blob/main/structure.png)
 
 ## Quickstart
 
