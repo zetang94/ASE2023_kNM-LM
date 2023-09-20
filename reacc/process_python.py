@@ -26,7 +26,7 @@ def clean_docstring_comments(comment):
 
 class processor(object):
     def __init__(self, lang, code=None, remove_comments=False):
-        LANGUAGE = Language('../reacc/parser/my-languages.so', lang)
+        LANGUAGE = Language('./reacc/parser/my-languages.so', lang)
         parser = Parser()
         parser.set_language(LANGUAGE)
         self.parser = [parser]
