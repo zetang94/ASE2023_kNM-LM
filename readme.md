@@ -347,6 +347,7 @@ CUDA_VISIBLE_DEVICES=0 python ./code/run_lm.py \
     --seed=42 \
     --build_index \
     --with_knn \
+    --need_knn_train \
     --dstore_dir=${dstore_dir} \
     --only_errors \
     --use_bayes
