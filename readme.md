@@ -374,6 +374,13 @@ CUDA_VISIBLE_DEVICES=0 python ./code/run_lm.py \
     --use_bayes
 ```
 
+> I found a bug in line-level code completion and have fixed it. So the result of line-level code completion may be a little different from that in the paper.
+> The bug code is in 684 line of ./code/run_lm.py and 68 line of ./reacc/run_line_com.py
+> 
+> Before: model_outputs = model(inputs)
+> 
+> After: model_outputs = model(inputs[:, :-1])
+
 ### Reference
 
 [1] Egor Bogomolov, Sergey Zhuravlev, Egor Spirin, Timofey Bryksin:Assessing Project-Level Fine-Tuning of ML4SE Models. CoRR abs/2206.03333 (2022)

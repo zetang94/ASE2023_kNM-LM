@@ -681,7 +681,9 @@ def eval_line_completion(args, model, tokenizer, file_type='test', knn_wrapper=N
             if knn_wrapper is not None:
                 knn_wrapper.reset()
 
-            model_outputs = model(inputs)
+            # This is a bug. which means that the last token is fed into the model.
+            # model_outputs = model(inputs)
+            model_outputs = model(inputs[:, :-1])
 
             outputs = model_outputs[1]
 
